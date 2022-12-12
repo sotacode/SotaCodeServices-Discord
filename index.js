@@ -29,10 +29,9 @@ const client = new Discord.Client({
         'MessageContent'
     ]
 });
-const CONFIG = require('./config.json');
 
 
-client.login(CONFIG.token).then(()=>{
+client.login(process.env.TOKEN_DISCORD).then(()=>{
     console.log(`${client.user.username} se ha conectado`);
 
     const {readdirSync} = require('fs');
@@ -43,7 +42,7 @@ client.login(CONFIG.token).then(()=>{
         if(fileEvent.endsWith('.js')){
             const fileName = fileEvent.substring(0,fileEvent.length - 3);
             const fileContent = require(`./events/${fileEvent}`);
-            client.on(fileName, fileContent.bind(null, client, CONFIG.environment.PREFIX));
+            client.on(fileName, fileContent.bind(null, client, process.env.PREFIX_DISCORD));
             delete require.cache[require.resolve(`./events/${fileEvent}`)];
         }        
     }
