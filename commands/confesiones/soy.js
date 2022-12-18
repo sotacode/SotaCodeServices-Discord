@@ -3,9 +3,9 @@ const frases = require('./data.json').Soy.Frases;
 
 module.exports = {
     name: 'soy',
-    category: 'Valorant',
+    category: 'Confesiones',
     premium: false,
-    alias: [],
+    alias: ['s'],
     run: async (client, message, args) => {
         console.log(message);
         

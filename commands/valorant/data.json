@@ -1,0 +1,19 @@
+{
+    "help": {
+        "commands": [
+            {
+                "command": "agentes",
+                "shortCommand": "va",
+                "options": ["NameAgent"],
+                "description": "El bot te responde con una lista de todos los personajes de valorant." 
+            },
+            {
+                "command": "vpickrandom",
+                "shortCommand": "vpr",
+                "options": ["NameUser"],
+                "description": "El bot te responde con una agentes al azar para cada usuario etiquetado." 
+            }
+        ]
+    }
+    
+}

@@ -36,19 +36,40 @@ module.exports = {
 
 returnAllAgents =  (message, response) => {
     let agentes = '';
+    let i = 0
     for (agente of response.data.data) {
-        agentes += agente.displayName + '\n';
+        if(i%6==0 && i!=0) agentes += agente.displayName +'\n'
+        else agentes += agente.displayName;
+        
+        if(i!=response.data.data.length - 1) agentes += ' - ';
+        i++;
     }
+    embedsData = new Discord.EmbedBuilder()
+                            .setTitle('Los agentes de Valorant son:')
+                            .setDescription(agentes)
+                            .setColor(0x0099FF)
+                            .setURL('https://discord.js.org/')
+                            //.setAuthor({ name: 'Tema: Valorant', iconURL: 'https://i.imgur.com/A12drNs.png', url: 'https://playvalorant.com/es-mx/?gclid=Cj0KCQiA4uCcBhDdARIsAH5jyUkBKqSexCvSFYlJDqymwynSDeASx-Vz0d9TatNTdu4vFKCfE0oIc5YaAmWrEALw_wcB&gclsrc=aw.ds' })
+                            .setAuthor({ name: 'Tema: Valorant', url: 'https://playvalorant.com/es-mx/?gclid=Cj0KCQiA4uCcBhDdARIsAH5jyUkBKqSexCvSFYlJDqymwynSDeASx-Vz0d9TatNTdu4vFKCfE0oIc5YaAmWrEALw_wcB&gclsrc=aw.ds' })
+                            //.setDescription('Some description here')
+                            .setThumbnail('https://i.imgur.com/A12drNs.png')
+                            /* .addFields(
+                                { name: 'Regular field title', value: 'Some value here' },
+                                { name: '\u200B', value: '\u200B' },
+                                { name: 'Inline field title', value: 'Some value here', inline: true },
+                                { name: 'Inline field title', value: 'Some value here', inline: true },
+                            )
+                            .addFields({ name: 'Inline field title', value: 'Some value here', inline: true }) */
+                            //.setImage('https://i.imgur.com/AfFp7pu.png')
+                            //.setTimestamp()
+                            .setFooter({ text: 'Created by SotaCode', iconURL: 'https://i.imgur.com/Vzvutwg.jpg' })
+
     message.channel.send('.')
     .then(msg=>{
         msg.edit({
-            embeds: [ new Discord.EmbedBuilder()
-                                .setColor('BLUE')
-                                .setImage(response.data.data[0].fullPortrait)
-                                .setTitle('Los agentes de Valorant son:')
-                                .setDescription(agentes)
-                    ]
+            embeds: [ embedsData ]
         });
+
     })
 }
 

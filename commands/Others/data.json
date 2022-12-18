@@ -1,0 +1,11 @@
+{
+    "help": {
+        "commands": [
+            {
+                "command": "ping",
+                "shortCommand": "p",
+                "description": "El bot te responde el ping o retraso en la conexion entre tu computadora y el servidor del bot." 
+            }
+        ]
+    }
+}

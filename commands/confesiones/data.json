@@ -1,4 +1,13 @@
 {
+    "help": {
+        "commands": [
+            {
+                "command": "soy",
+                "shortCommand": "s",
+                "description": "El bot te responde con algun adjetivo calificativo random." 
+            }
+        ]
+    },
     "Soy": {
         "Frases":[
             "eres weta 🤖",
@@ -20,7 +29,9 @@
             "eres hijo del tio emilio 🤖",
             "eres main Darius 🤖",
             "eres un error 🤖",
-            "eres una verguenza 👌"
+            "eres una verguenza 👌",
+            "eres hermos@ 💅",
+            "eres una decepción 🤖"
         ]
     }
 }

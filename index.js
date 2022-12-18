@@ -62,7 +62,6 @@ client.login(process.env.TOKEN_DISCORD).then(()=>{
 });
 
 client.on('ready',()=>{
-    console.log('Estoy activo');
     //client.channels.cache.get('999402473628377118').send('Estoy activo');
 });
 
