@@ -43,11 +43,17 @@ client.on('ready',async()=>{
     ctx.drawImage(background,0,0,canvas.width, canvas.height);
     ctx.globalAlpha = 1.0;
 
+    const merry = await Canvas.loadImage("https://i.imgur.com/HRZ1eLT.png")
+    ctx.drawImage(merry,110,10, 90, 90)
+
     ctx.fillStyle = "#ffffff"
     ctx.strokeStyle = "#000"
     ctx.font = '50px "Arial"'
-    ctx.fillText("💀 - Tripulación Los Mancos - 💀", 140, 60)
-    ctx.strokeText(`💀 - Tripulación Los Mancos - 💀`, 140, 60)
+    ctx.fillText(" - Tripulación Los Mancos - ", 195, 60)
+    ctx.strokeText(` - Tripulación Los Mancos - `, 195, 60)
+
+    const sunny = await Canvas.loadImage("https://i.imgur.com/iFiX8Jl.png")
+    ctx.drawImage(sunny, 820,10, 95, 95)
 
     ctx.fillStyle = "#ffffff"
     ctx.strokeStyle = "#000"
@@ -81,11 +87,17 @@ client.on('guildMemberAdd',async  (member) => {
         ctx.drawImage(background,0,0,canvas.width, canvas.height);
         ctx.globalAlpha = 1.0;
 
+        const merry = await Canvas.loadImage("https://i.imgur.com/HRZ1eLT.png")
+        ctx.drawImage(merry,110,10, 90, 90)
+
         ctx.fillStyle = "#ffffff"
         ctx.strokeStyle = "#000"
         ctx.font = '50px "Arial"'
-        ctx.fillText("💀 - Tripulación Los Mancos - 💀", 140, 60)
-        ctx.strokeText(`💀 - Tripulación Los Mancos - 💀`, 140, 60)
+        ctx.fillText(" - Tripulación Los Mancos - ", 195, 60)
+        ctx.strokeText(` - Tripulación Los Mancos - `, 195, 60)
+
+        const sunny = await Canvas.loadImage("https://i.imgur.com/iFiX8Jl.png")
+        ctx.drawImage(sunny, 820,10, 95, 95)
 
         ctx.fillStyle = "#ffffff"
         ctx.strokeStyle = "#000"
