@@ -71,7 +71,7 @@ client.on('ready',async()=>{
 
 });
 
-/* client.on('guildMemberAdd',async  (member) => {
+client.on('guildMemberAdd',async  (member) => {
     if(member.guild.id === "752716924298723448"){
         Canvas.registerFont('assets/Fonts/onepiecefont.ttf', {family: 'OnePiece'})
         const canvas = Canvas.createCanvas(1018, 468);
@@ -109,7 +109,7 @@ client.on('ready',async()=>{
         client.channels.cache.get("1055624860920971324").send({files: [attachment]})
         
     }
-}); */
+});
 
 
 client.login(process.env.TOKEN_DISCORD).then(()=>{
