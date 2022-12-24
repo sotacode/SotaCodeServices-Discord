@@ -46,8 +46,8 @@ client.on('ready',async()=>{
     ctx.fillStyle = "#ffffff"
     ctx.strokeStyle = "#000"
     ctx.font = '50px "Arial"'
-    ctx.fillText("🏴‍☠️ Tripulación Los Mancos 🏴‍☠️", 190, 60)
-    ctx.strokeText(`🏴‍☠️ Tripulación Los Mancos 🏴‍☠️`, 190, 60)
+    ctx.fillText("💀 - Tripulación Los Mancos - 💀", 140, 60)
+    ctx.strokeText(`💀 - Tripulación Los Mancos - 💀`, 140, 60)
 
     ctx.fillStyle = "#ffffff"
     ctx.strokeStyle = "#000"
@@ -76,7 +76,7 @@ client.on('guildMemberAdd',async  (member) => {
         Canvas.registerFont('assets/Fonts/onepiecefont.ttf', {family: 'OnePiece'})
         const canvas = Canvas.createCanvas(1018, 468);
         ctx = canvas.getContext("2d");
-        ctx.globalAlpha = 0.3;
+        ctx.globalAlpha = 0.5;
         const background = await Canvas.loadImage("https://i.imgur.com/trVhBB8.jpg")
         ctx.drawImage(background,0,0,canvas.width, canvas.height);
         ctx.globalAlpha = 1.0;
@@ -84,8 +84,8 @@ client.on('guildMemberAdd',async  (member) => {
         ctx.fillStyle = "#ffffff"
         ctx.strokeStyle = "#000"
         ctx.font = '50px "Arial"'
-        ctx.fillText("☠ - Tripulación Los Mancos - ☠", 190, 60)
-        ctx.strokeText(`☠ - Tripulación Los Mancos - ☠`, 190, 60)
+        ctx.fillText("💀 - Tripulación Los Mancos - 💀", 140, 60)
+        ctx.strokeText(`💀 - Tripulación Los Mancos - 💀`, 140, 60)
 
         ctx.fillStyle = "#ffffff"
         ctx.strokeStyle = "#000"
@@ -102,7 +102,7 @@ client.on('guildMemberAdd',async  (member) => {
         ctx.closePath()
         ctx.clip()
         
-        const avatar = await Canvas.loadImage("https://i.imgur.com/Vzvutwg.jpg")
+        const avatar = await Canvas.loadImage(member.user.displayAvatarURL({dynamic:true, size: 1024, extension: 'jpg'}))
         ctx.drawImage(avatar,97,127, 301, 301)
 
         const attachment = new Discord.AttachmentBuilder(canvas.toBuffer(), "Bienvenida.png")
